@@ -4,7 +4,7 @@
 #
 Name     : python-zaqarclient
 Version  : 0.2.0
-Release  : 1
+Release  : 2
 URL      : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-0.2.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-0.2.0.tar.gz
 Summary  : Client Library for OpenStack Zaqar Queueing API
