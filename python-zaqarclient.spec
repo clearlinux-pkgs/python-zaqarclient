@@ -4,7 +4,7 @@
 #
 Name     : python-zaqarclient
 Version  : 0.2.0
-Release  : 2
+Release  : 3
 URL      : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-0.2.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-0.2.0.tar.gz
 Summary  : Client Library for OpenStack Zaqar Queueing API
@@ -68,6 +68,7 @@ BuildRequires : traceback2-python
 BuildRequires : unittest2-python
 BuildRequires : virtualenv
 BuildRequires : wrapt-python
+Patch1: 0001-Removed-Delete-Flavor-function-because-is-causing-co.patch
 
 %description
 *******************
@@ -87,6 +88,7 @@ Requires: jsonschema-python
 Requires: oslo.i18n-python
 Requires: python-keystoneclient-python
 Requires: requests-python
+Requires: stevedore
 
 %description python
 python components for the python-zaqarclient package.
@@ -94,6 +96,7 @@ python components for the python-zaqarclient package.
 
 %prep
 %setup -q -n python-zaqarclient-0.2.0
+%patch1 -p1
 
 %build
 python2 setup.py build -b py2
@@ -103,7 +106,7 @@ python3 setup.py build -b py3
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-python2 setup.py test
+PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test
 %install
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot}
