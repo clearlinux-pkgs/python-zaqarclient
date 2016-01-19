@@ -4,7 +4,7 @@
 #
 Name     : python-zaqarclient
 Version  : 0.3.0
-Release  : 4
+Release  : 5
 URL      : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-0.3.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-0.3.0.tar.gz
 Summary  : Client Library for OpenStack Zaqar Messaging API
@@ -18,6 +18,7 @@ BuildRequires : Sphinx-python
 BuildRequires : colorama-python
 BuildRequires : coverage-python
 BuildRequires : ddt-python
+BuildRequires : debtcollector-python
 BuildRequires : demjson-python
 BuildRequires : discover-python
 BuildRequires : docutils-python
