@@ -1,10 +1,97 @@
 CHANGES
 =======
 
+1.0.0
+-----
+
+* Support PATCH of queue metadata
+* "pool_group" word should be used instead "pool"
+* Update pool on pool create if it exists
+* Update flavor on flavor create if it exists
+* Make TransportErrors more descriptive
+* Remove unused pngmath Sphinx extension
+* Raise ConflictError like other transport errors
+* Do not catch ConflictError on subscription create
+* Add subscriptions for queue object
+* Updated from global requirements
+* Support claims for v2
+* Fix wrong api version type
+* Improve subscription listing
+* Fix Subscription's queue_name variable being tuple
+* Add CLI support for signed URLs
+* Fix queue stats for v1.1 and above versions
+* Fix client not working on Python 3
+* Updated from global requirements
+* Clean up flavor test classes
+* Fix typo preventing queue list for v1
+* Add a way to create a signed URL from a queue
+* Use API version checking directly
+* Updated from global requirements
+* Fixing the deprecated library function
+* Add Support for subscription list v2
+* Add support for subscription show v2
+* Expose more CLI commands for v2
+* Add support for subscription delete v2
+* Add support for subscription update v2
+* Add support for subscription create v2
+* Claim release CLI support for v1
+* Claim renew CLI support for v1
+* Query claim CLI support for v1
+* Flavor list support for v2
+* Handle os_auth_token option in keystone config
+* Flavor create CLI support for v2
+* Updated from global requirements
+* Fix bad "pool list" api v2 entry point for CLI
+* Claim create CLI support for v1
+* Put py34 first in the env order of tox
+* Make sure queue create works for cli
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Added support to claims
+* Updated from global requirements
+* Flavor update cli support for v2
+* Flavor show cli support for v2
+* Drop py33 support
+* Fix freeze of Claim object's age property
+* Deprecated tox -downloadcache option removed
+* Add cli support for flavor create v1
+* Updated from global requirements
+* Delete CLI for Get/SetQueueMetadata which is API-v1 only
+* Expose CLI commands for v2
+* Delete CLI for CheckQueueExistence which is <=v1.1 only
+* Refactor the test for v2 queues and messages
+* Add support for flavor list v1
+* Add cli support for flavor show v1
+* Updated from global requirements
+* Using clouds.yaml to get the credentials
+* Remove py26 support
+* delete python bytecode before every test run
+* Pool & flavor cli implementation for v2
+* Pool list cli support for v2
+* Pool delete cli support for v2
+* Add cli support for flavor update v1
+* Pool update support for v2
+* Added pool list support for v1
+* Fix unexpected output of pools()
+* Updated from global requirements
+* Add `pool` support for v2
+* Add `flavor` support for v2
+* Implement CLI support for pool delete
+* Added pool update support for v1
+* Attaching a default project_id
+* Pool show support for v2
+* Added pool show support to v1
+* Fix create pool error
+* Support creating signed url's in client
+* Fix client UnauthorizedError
+* Updated from global requirements
+
 0.3.0
 -----
 
 * Rename `flavor delete` command
+* Added cli implementation for v2
+* Remove periods of docstring
+* Added API_VERSION for v2
 * Added support to v2
 * improve readme contents
 * Fix order of arguments in assertEqual
