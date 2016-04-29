@@ -4,7 +4,7 @@
 #
 Name     : python-zaqarclient
 Version  : 1.0.0
-Release  : 7
+Release  : 8
 URL      : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-1.0.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-1.0.0.tar.gz
 Summary  : Client Library for OpenStack Zaqar Messaging API
