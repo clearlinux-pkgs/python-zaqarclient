@@ -1,6 +1,79 @@
 CHANGES
 =======
 
+1.4.0
+-----
+
+* Updated from global requirements
+* Set client module __version__
+* Enable release notes translation
+* Switch to oslo_log
+
+1.3.0
+-----
+
+* Remove unnecessary utf8 coding format in the head of files
+* Updated from global requirements
+* Add doc for subscription cli
+* Update release note doc
+* Add the releasenote detail
+* Add command guide for openstack ping&health CLI
+* Add command guide for openstack flavor CLI
+* Add command guide for openstack pool CLI
+* Add Constraints support
+* Fix typos in zaqarclient
+* Add releasenotes for client
+* Add command guide for openstack claim CLI
+* Add command guide for queue
+* update doc to Api v2.0
+* translate all command help strings
+* Remove the TODO for subscription ttl test
+* Remove version in README
+* Update author and home-page
+* Fix CI failure
+* Show team and repo badges on README
+* Delete deprecated directory openstack/common
+* Add plug-in summary for osc doc
+* Updated from global requirements
+* Fix the CI failure
+* Add profiling support to Zaqar client
+* Support keystone session when creating client
+* Add Python 3.5 classifier and venv
+* Files with no code must be left completely empty
+* Support SSL and Insecure
+* Change assertTrue(isinstance()) by optimal assert
+* Switch keystoneclient to keystoneauth
+* Remove unused openstack-doc-tools from test-requirements.txt
+* Using v2 interface in example
+
+1.2.0
+-----
+
+* Updated from global requirements
+* Remove discover from test-requirements
+* Clean imports in code
+* Update the functional test
+* Fix the attribute missing error
+* Create a websocket transport
+* Updated from global requirements
+* Add requests-mock to test-requirements.txt
+* Use osc_lib instead of cliff
+* Use osc-lib instead of openstackclient
+
+1.1.0
+-----
+
+* Add update queue function in v2
+* Fix the zaqar functional test job
+* Ensure the float value of api version could work
+* Updated from global requirements
+* Fix doc build if git is absent
+* Refactor queue create
+* Support /ping and /health for v2
+* Fix tests related to queue attributes in API V2
+* Use v2 as the default cli version
+* Remove pypy support
+
 1.0.0
 -----
 
