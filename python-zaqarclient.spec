@@ -6,7 +6,7 @@
 #
 Name     : python-zaqarclient
 Version  : 1.4.0
-Release  : 13
+Release  : 14
 URL      : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-1.4.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-1.4.0.tar.gz
 Source99 : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-1.4.0.tar.gz.asc
@@ -14,64 +14,22 @@ Summary  : Client Library for OpenStack Zaqar Messaging API
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: python-zaqarclient-python
-BuildRequires : Jinja2
-BuildRequires : Pygments
-BuildRequires : Sphinx-python
-BuildRequires : cliff-python
-BuildRequires : cmd2-python
+Requires: jsonschema
+Requires: keystoneauth1
+Requires: osc-lib
+Requires: oslo.i18n
+Requires: oslo.log
+Requires: oslo.utils
+Requires: pbr
+Requires: requests
+Requires: six
+Requires: stevedore
 BuildRequires : configparser-python
-BuildRequires : coverage-python
-BuildRequires : ddt-python
-BuildRequires : discover-python
-BuildRequires : enum34-python
-BuildRequires : extras
-BuildRequires : extras-python
-BuildRequires : fixtures-python
-BuildRequires : flake8-python
-BuildRequires : hacking
-BuildRequires : jsonpatch-python
-BuildRequires : jsonpointer-python
-BuildRequires : jsonschema-python
-BuildRequires : linecache2-python
-BuildRequires : markupsafe-python
-BuildRequires : mccabe-python
-BuildRequires : msgpack-python-python
-BuildRequires : nose-exclude-python
-BuildRequires : nose-python
-BuildRequires : openstack-doc-tools-python
-BuildRequires : openstack.nose_plugin
-BuildRequires : openstacksdk-python
-BuildRequires : os-client-config-python
-BuildRequires : oslo.config
-BuildRequires : oslosphinx-python
 BuildRequires : pbr
-BuildRequires : pep8
 BuildRequires : pip
-BuildRequires : pluggy
-BuildRequires : prettytable
-BuildRequires : py-python
-BuildRequires : pyflakes-python
-BuildRequires : pyparsing-python
-BuildRequires : pyrsistent-python
-BuildRequires : pytest
-BuildRequires : python-cinderclient-python
 BuildRequires : python-dev
-BuildRequires : python-glanceclient-python
-BuildRequires : python-keystoneclient-python
-BuildRequires : python-mimeparse-python
-BuildRequires : python-mock-python
-BuildRequires : python-novaclient-python
-BuildRequires : python-openstackclient-python
 BuildRequires : python3-dev
 BuildRequires : setuptools
-BuildRequires : termcolor-python
-BuildRequires : testrepository-python
-BuildRequires : testtools
-BuildRequires : testtools-python
-BuildRequires : tox
-BuildRequires : traceback2-python
-BuildRequires : unittest2-python
-BuildRequires : virtualenv
 
 %description
 ========================
@@ -83,7 +41,6 @@ Team and repository tags
 %package python
 Summary: python components for the python-zaqarclient package.
 Group: Default
-Requires: jsonschema-python
 
 %description python
 python components for the python-zaqarclient package.
@@ -94,12 +51,12 @@ python components for the python-zaqarclient package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1487210870
+export SOURCE_DATE_EPOCH=1489284234
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1487210870
+export SOURCE_DATE_EPOCH=1489284234
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
