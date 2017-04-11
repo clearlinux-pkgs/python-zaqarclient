@@ -1,6 +1,30 @@
 CHANGES
 =======
 
+1.5.0
+-----
+
+* CLI: support detailed in queue list
+* Fix flavor creation issue with CLI
+* Don not show 'capabilities' if not specify '--detailed'
+* Support post and list messages
+* remove "--detailed" in subscription list doc
+* Add 'pool' description to pool flavor commands
+* Remove log translations
+* Drop "os" prefix for project id
+* Revert "Fix The header X-PROJECT-ID  missing bug"
+* Fix The header X-PROJECT-ID  missing bug
+* Remove "detailed" parser from subscription list
+* Updated from global requirements
+* [Fix gate]Update test requirement
+* Support `age` and `confirmed` for subscription
+* Change resource_types action
+* Support purge queue
+* Add Ocata version mapping
+* Update reno for stable/ocata
+* Replace the github with git.openstack.org
+* Remove support for py34
+
 1.4.0
 -----
 
@@ -58,6 +82,7 @@ CHANGES
 * Updated from global requirements
 * Add requests-mock to test-requirements.txt
 * Use osc_lib instead of cliff
+* Add an example for pre signed URL
 * Use osc-lib instead of openstackclient
 
 1.1.0
