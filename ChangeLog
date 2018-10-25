@@ -1,10 +1,24 @@
 CHANGES
 =======
 
+1.11.0
+------
+
+* Properly pass the CA to requests
+* Import zaqarclient-dsvm-functional job
+* Remove PyPI downloads
+* add python 3.6 unit test job
+* switch documentation job to new PTI
+* import zuul job settings from project-config
+* Replace os-client-config to openstacksdk
+* Update reno for stable/rocky
+* Update releasenotes index for Rocky
+
 1.10.0
 ------
 
 * fix tox python3 overrides
+* Comply with Python PTI
 * Fix doc CI failure
 * Trivial: Update pypi url to new url
 * Follow the new PTI for document build
