@@ -6,7 +6,7 @@
 #
 Name     : python-zaqarclient
 Version  : 1.11.0
-Release  : 21
+Release  : 22
 URL      : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-1.11.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-1.11.0.tar.gz
 Source99 : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-1.11.0.tar.gz.asc
@@ -16,27 +16,25 @@ License  : Apache-2.0
 Requires: python-zaqarclient-license = %{version}-%{release}
 Requires: python-zaqarclient-python = %{version}-%{release}
 Requires: python-zaqarclient-python3 = %{version}-%{release}
-Requires: Sphinx
 Requires: jsonschema
 Requires: keystoneauth1
-Requires: openstackdocstheme
-Requires: os-client-config
 Requires: osc-lib
 Requires: oslo.i18n
 Requires: oslo.log
 Requires: oslo.utils
 Requires: pbr
-Requires: reno
 Requires: requests
-Requires: requests-mock
 Requires: six
 Requires: stevedore
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
 
 %description
+========================
 Team and repository tags
-        ========================
+========================
+.. image:: http://governance.openstack.org/tc/badges/python-zaqarclient.svg
+:target: http://governance.openstack.org/tc/reference/tags/index.html
 
 %package license
 Summary: license components for the python-zaqarclient package.
@@ -72,7 +70,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541273285
+export SOURCE_DATE_EPOCH=1551036624
+export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
