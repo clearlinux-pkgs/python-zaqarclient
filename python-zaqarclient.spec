@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x4F398DEAE440091C (infra-root@openstack.org)
 #
 Name     : python-zaqarclient
-Version  : 1.13.0
-Release  : 30
-URL      : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-1.13.0.tar.gz
-Source0  : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-1.13.0.tar.gz
-Source1  : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-1.13.0.tar.gz.asc
+Version  : 1.13.1
+Release  : 31
+URL      : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-1.13.1.tar.gz
+Source0  : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-1.13.1.tar.gz
+Source1  : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-1.13.1.tar.gz.asc
 Summary  : Client Library for OpenStack Zaqar Messaging API
 Group    : Development/Tools
 License  : Apache-2.0
@@ -39,8 +39,11 @@ BuildRequires : six
 BuildRequires : stevedore
 
 %description
+========================
 Team and repository tags
-        ========================
+========================
+.. image:: http://governance.openstack.org/tc/badges/python-zaqarclient.svg
+:target: http://governance.openstack.org/tc/reference/tags/index.html
 
 %package license
 Summary: license components for the python-zaqarclient package.
@@ -64,31 +67,32 @@ Summary: python3 components for the python-zaqarclient package.
 Group: Default
 Requires: python3-core
 Provides: pypi(python_zaqarclient)
-Requires: pypi(jsonschema)
-Requires: pypi(keystoneauth1)
-Requires: pypi(osc_lib)
-Requires: pypi(oslo.i18n)
-Requires: pypi(oslo.log)
-Requires: pypi(oslo.utils)
-Requires: pypi(pbr)
-Requires: pypi(requests)
 Requires: pypi(six)
+Requires: pypi(osc_lib)
+Requires: pypi(requests)
+Requires: pypi(oslo.utils)
+Requires: pypi(oslo.log)
 Requires: pypi(stevedore)
+Requires: pypi(jsonschema)
+Requires: pypi(pbr)
+Requires: pypi(oslo.i18n)
+Requires: pypi(keystoneauth1)
 
 %description python3
 python3 components for the python-zaqarclient package.
 
 
 %prep
-%setup -q -n python-zaqarclient-1.13.0
-cd %{_builddir}/python-zaqarclient-1.13.0
+%setup -q -n python-zaqarclient-1.13.1
+cd %{_builddir}/python-zaqarclient-1.13.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583542726
+export SOURCE_DATE_EPOCH=1587060124
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -101,7 +105,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/python-zaqarclient
-cp %{_builddir}/python-zaqarclient-1.13.0/LICENSE %{buildroot}/usr/share/package-licenses/python-zaqarclient/57aed0b0f74e63f6b85cce11bce29ba1710b422b
+cp %{_builddir}/python-zaqarclient-1.13.1/LICENSE %{buildroot}/usr/share/package-licenses/python-zaqarclient/57aed0b0f74e63f6b85cce11bce29ba1710b422b
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :

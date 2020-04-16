@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+1.13.1
+------
+
+* Fix the count error in zaqarclient
+
 1.13.0
 ------
 
