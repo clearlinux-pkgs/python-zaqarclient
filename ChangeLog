@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+2.0.0
+-----
+
+* Switch to newer openstackdocstheme and reno versions
+* Cleanup py27 support
+* Update hacking for Python3
+* Drop python 2.7 support and testing
+* Update master for stable/ussuri
+
 1.13.1
 ------
 
