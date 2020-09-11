@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+2.0.1
+-----
+
+* Adding the doc of message in CLI
+* Fix the error of parameter passing
+
 2.0.0
 -----
 
