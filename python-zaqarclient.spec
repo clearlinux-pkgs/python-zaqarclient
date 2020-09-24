@@ -6,7 +6,7 @@
 #
 Name     : python-zaqarclient
 Version  : 2.0.1
-Release  : 33
+Release  : 34
 URL      : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-2.0.1.tar.gz
 Source0  : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-2.0.1.tar.gz
 Source1  : http://tarballs.openstack.org/python-zaqarclient/python-zaqarclient-2.0.1.tar.gz.asc
